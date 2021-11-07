@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap");
-header {
+header, footer {
   background-color: #80c5ed;
 }
 
@@ -63,9 +63,26 @@ nav ul li a:hover {
   padding: 1em;
 }
 
-.ent-header {
+h2, p {
   text-align: center;
   font-family: "Roboto", sans-serif;
+}
+
+footer {
+  text-align: center;
+  vertical-align: center;
+  margin: 0 auto;
+  padding: 0.5em;
+}
+footer .socialIcons a {
+  padding: 1em;
+}
+footer .signature {
+  margin-top: 1em;
+  font-family: "Roboto", sans-serif;
+}
+footer a {
+  color: #0a163c;
 }
 
 @media (min-width: 32em) {

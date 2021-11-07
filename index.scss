@@ -1,6 +1,6 @@
 @import "-variables";
 
-header {
+header, footer {
   background-color: $header-color;
 }
 nav ul{
@@ -57,9 +57,25 @@ nav ul{
 .flyer-grid {
   padding:1em;
 }
-.ent-header {
+h2, p {
   text-align: center;
   font-family: $font;
+}
+footer {
+  text-align: center;
+  vertical-align: center;
+  margin: 0 auto;
+  padding:.5em;
+  .socialIcons a {
+    padding:1em;
+  }
+  .signature {
+    margin-top:1em;
+    font-family: $font;
+  }
+  a {
+    color: $nav-color;
+  }
 }
 @media (min-width: 32em) {
   header{
