@@ -13,4 +13,11 @@ img {
   width: 90%;
 }
 
+@media (min-width: 24.5em) {
+  header {
+    display: flex;
+    flex-flow: row;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */

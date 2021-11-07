@@ -10,3 +10,9 @@ img {
   text-align: center;
   width:90%;
 }
+@media (min-width: 24.5em) {
+  header{
+    display:flex;
+    flex-flow: row;
+  }
+}
