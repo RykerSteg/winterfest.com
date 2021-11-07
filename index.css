@@ -9,7 +9,6 @@ nav ul {
   overflow: hidden;
   font-weight: bold;
 }
-
 nav ul li a {
   display: block;
   background-color: #0a163c;
@@ -21,18 +20,16 @@ nav ul li a {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
 }
-
 nav ul li a:hover {
   background-color: #80c5ed;
   color: #0a163c;
 }
 
-.homeNav li:first-child {
-  display: block;
-}
-
 .homeNav li {
   display: none;
+}
+.homeNav li:first-child {
+  display: block;
 }
 
 .menu li {
@@ -55,7 +52,7 @@ nav ul li a:hover {
   text-align: center;
 }
 
-.talentfest, .suzysignup {
+.talentfest, .suzysignup, .vendorSignup {
   margin: auto;
   padding: 1em;
   text-align: center;
@@ -64,6 +61,11 @@ nav ul li a:hover {
 
 .flyer-grid {
   padding: 1em;
+}
+
+.ent-header {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 @media (min-width: 32em) {

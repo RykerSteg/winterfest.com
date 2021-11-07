@@ -8,27 +8,27 @@ nav ul{
   padding:0;
   overflow:hidden;
   font-weight: bold;
-}
-nav ul li a{
-  display:block;
-  background-color:$nav-color;
-  color:$nav-text-color;
-  text-align: center;
-  padding:.5em;
-  height:100%;
-  text-decoration:none;
-  font-family:$font;
-  font-weight: 900;
-}
-nav ul li a:hover{
-  background-color:$nav-hover-color;
-  color: $nav-hover-text;
-}
-.homeNav li:first-child{
-  display:block;
+  li a {
+    display:block;
+    background-color:$nav-color;
+    color:$nav-text-color;
+    text-align: center;
+    padding:.5em;
+    height:100%;
+    text-decoration:none;
+    font-family:$font;
+    font-weight: 900;
+    &:hover{
+        background-color:$nav-hover-color;
+        color: $nav-hover-text; 
+    }
+  }
 }
 .homeNav li {
   display:none;
+  &:first-child {
+    display:block;
+  }
 }
 .menu li{
   display:block;
@@ -47,7 +47,7 @@ nav ul li a:hover{
   text-align: center;
 }
 
-.talentfest, .suzysignup {
+.talentfest, .suzysignup, .vendorSignup {
   margin: auto;
   padding:1em;
   text-align: center;
@@ -56,6 +56,10 @@ nav ul li a:hover{
 
 .flyer-grid {
   padding:1em;
+}
+.ent-header {
+  text-align: center;
+  font-family: $font;
 }
 @media (min-width: 32em) {
   header{
