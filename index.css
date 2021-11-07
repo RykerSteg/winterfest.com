@@ -48,7 +48,7 @@ nav ul li a:hover {
   padding: 1em;
 }
 
-.flyer {
+.flyer, .flyer-grid img {
   margin-top: 1em;
   max-width: 100%;
   border: solid #0a163c 2px;
@@ -60,6 +60,10 @@ nav ul li a:hover {
   padding: 1em;
   text-align: center;
   width: 90%;
+}
+
+.flyer-grid {
+  padding: 1em;
 }
 
 @media (min-width: 32em) {

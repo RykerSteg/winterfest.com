@@ -40,17 +40,22 @@ nav ul li a:hover{
   max-width: 100%;
   padding:1em;
 }
-.flyer {
+.flyer, .flyer-grid img {
   margin-top:1em;
   max-width:100%;
   border: solid $nav-color 2px;
   text-align: center;
 }
+
 .talentfest, .suzysignup {
   margin: auto;
   padding:1em;
   text-align: center;
   width:90%;
+}
+
+.flyer-grid {
+  padding:1em;
 }
 @media (min-width: 32em) {
   header{
