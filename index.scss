@@ -40,7 +40,7 @@ nav ul{
   max-width: 100%;
   padding:1em;
 }
-.flyer, .flyer-grid img {
+.flyer, .flyer-grid img, .vendor-flyer {
   margin-top:1em;
   max-width:100%;
   border: solid $nav-color 2px;
@@ -76,7 +76,7 @@ footer {
   a {
     color: $nav-color;
   }
-}
+
 @media (min-width: 32em) {
   header{
     display:grid;
