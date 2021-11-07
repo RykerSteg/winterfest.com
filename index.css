@@ -54,7 +54,7 @@ img {
   width: 90%;
 }
 
-@media (min-width: 24.5em) {
+@media (min-width: 32em) {
   header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
