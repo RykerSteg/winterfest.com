@@ -86,6 +86,10 @@ a {
   color: #0a163c;
 }
 
+.ent-img {
+  max-width: 100%;
+}
+
 @media (min-width: 32em) {
   header {
     display: grid;
