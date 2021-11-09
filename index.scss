@@ -36,13 +36,13 @@ nav ul{
 .logoimg {
   max-width: 100%;
 }
-.flyer-div{
+.flyer-div, .ent-main{
   max-width: 100%;
   padding:1em;
 }
-.flyer, .flyer-grid img, .vendor-flyer {
+.flyer, .flyer-grid img {
   margin-top:1em;
-  max-width:100%;
+  max-width:100%; 
   border: solid $nav-color 2px;
   text-align: center;
 }
@@ -76,9 +76,6 @@ footer {
 }
   a {
     color: $nav-color;
-  }
-  .ent-img {
-    max-width: 100%;
   }
 
 @media (min-width: 32em) {

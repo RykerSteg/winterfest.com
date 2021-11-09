@@ -40,12 +40,12 @@ nav ul li a:hover {
   max-width: 100%;
 }
 
-.flyer-div {
+.flyer-div, .ent-main {
   max-width: 100%;
   padding: 1em;
 }
 
-.flyer, .flyer-grid img, .vendor-flyer {
+.flyer, .flyer-grid img {
   margin-top: 1em;
   max-width: 100%;
   border: solid #0a163c 2px;
@@ -84,10 +84,6 @@ footer .signature {
 
 a {
   color: #0a163c;
-}
-
-.ent-img {
-  max-width: 100%;
 }
 
 @media (min-width: 32em) {
