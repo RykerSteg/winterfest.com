@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap");
+@keyframes left {
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: scale(1.15) translateX(5%);
+  }
+}
+@keyframes center {
+  100% {
+    transform: scale(1.15);
+  }
+}
+@keyframes right {
+  50% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: scale(1.15) translateX(-5%);
+  }
+}
 header, footer {
   background-color: #80c5ed;
 }
@@ -87,6 +108,13 @@ a {
 }
 
 @media (min-width: 36em) {
+  .homeNav li {
+    display: block;
+  }
+  .homeNav li:first-child {
+    display: none;
+  }
+
   header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -144,6 +172,18 @@ a {
 
   .flyer-grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .left:hover {
+    animation: left 1s ease-in forwards;
+  }
+
+  .center:hover {
+    animation: center 0.5s ease-in forwards;
+  }
+
+  .right:hover {
+    animation: right 1s ease-in forwards;
   }
 }
 

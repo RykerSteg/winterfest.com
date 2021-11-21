@@ -1,4 +1,5 @@
 @import "-variables";
+@import "-animations";
 
 header, footer {
   background-color: $header-color;
@@ -79,6 +80,14 @@ footer {
   }
 
 @media (min-width: 36em) {
+  .homeNav {
+    li {
+      display: block;
+      &:first-child {
+        display: none;
+      }
+    }
+  }
   header{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -132,5 +141,20 @@ footer {
   //activities grid large
   .flyer-grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .left {
+    &:hover {
+      animation: left 1s ease-in forwards;
+    }
+  }
+  .center {
+    &:hover {
+      animation: center .5s ease-in forwards;
+    }
+  }
+  .right {
+    &:hover {
+      animation: right 1s ease-in forwards;
+    }
   }
 }
