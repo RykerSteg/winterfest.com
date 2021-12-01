@@ -1,23 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap");
-@keyframes left {
-  50% {
-    transform: translateX(20%);
-  }
-  100% {
-    transform: scale(1.15) translateX(5%);
-  }
-}
 @keyframes center {
   100% {
-    transform: scale(1.15);
-  }
-}
-@keyframes right {
-  50% {
-    transform: translateX(-20%);
-  }
-  100% {
-    transform: scale(1.15) translateX(-5%);
+    transform: scale(1.25);
   }
 }
 header, footer {
@@ -61,7 +45,7 @@ nav ul li a:hover {
   max-width: 100%;
 }
 
-.flyer-div, .ent-main {
+.flyer-div {
   max-width: 100%;
   padding: 1em;
 }
@@ -107,7 +91,20 @@ a {
   color: #0a163c;
 }
 
+.ent-main {
+  padding: 1em;
+}
+.ent-main .ent-1, .ent-main .ent-2 {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
 @media (min-width: 36em) {
+  .homeNav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
   .homeNav li {
     display: block;
   }
@@ -164,6 +161,24 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
   }
+
+  .ent-schedule {
+    display: flex;
+    flex-flow: row;
+  }
+  .ent-schedule .ent-1, .ent-schedule .ent-2 {
+    margin: 0.5em;
+  }
+
+  .vendor-div {
+    display: flex;
+  }
+  .vendor-div .flyer {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
 }
 @media (min-width: 52em) {
   .logoimg {
@@ -175,7 +190,7 @@ a {
   }
 
   .left:hover {
-    animation: left 1s ease-in forwards;
+    animation: center 0.5s ease-in forwards;
   }
 
   .center:hover {
@@ -183,7 +198,11 @@ a {
   }
 
   .right:hover {
-    animation: right 1s ease-in forwards;
+    animation: center 0.5s ease-in forwards;
+  }
+
+  .events-schedule {
+    width: 90%;
   }
 }
 

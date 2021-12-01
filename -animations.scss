@@ -1,22 +1,6 @@
-@keyframes left {
-  50% {
-    transform: translateX(20%);
-  }
-  100% {
-    transform: scale(1.15) translateX(5%);
 
-  }
-}
 @keyframes center {
   100% {
-    transform: scale(1.15);
-  }
-}
-@keyframes right {
-  50% {
-    transform: translateX(-20%);
-  }
-  100% {
-    transform: scale(1.15) translateX(-5%);
+    transform: scale(1.25);
   }
 }
