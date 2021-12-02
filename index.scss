@@ -78,14 +78,36 @@ footer {
   a {
     color: $nav-color;
   }
-  .ent-main {
-    padding: 1em;
-    .ent-1, .ent-2 {
-      width: 100%;
-      margin: 0;
-      text-align: center;
-    }
+.ent-main {
+  padding: 1em;
+  .ent-1, .ent-2 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
   }
+}
+.voting-div {
+  width: 40%;
+  height: 100%;
+  padding: 1em;
+  background-color: $body-color;
+  text-align: center;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: solid 2px $nav-color;
+  border-radius: 15px;
+  font-size: 35px;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  &:hover {
+    background-color: $nav-color;
+    border-color: $body-color;
+  }
+}
+
 
 @media (min-width: 36em) {
   .homeNav {

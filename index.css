@@ -100,6 +100,28 @@ a {
   text-align: center;
 }
 
+.voting-div {
+  width: 40%;
+  height: 100%;
+  padding: 1em;
+  background-color: #80c5ed;
+  text-align: center;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: solid 2px #0a163c;
+  border-radius: 15px;
+  font-size: 35px;
+}
+.voting-div a {
+  text-decoration: none;
+  color: #fff;
+}
+.voting-div:hover {
+  background-color: #0a163c;
+  border-color: #80c5ed;
+}
+
 @media (min-width: 36em) {
   .homeNav {
     display: grid;
