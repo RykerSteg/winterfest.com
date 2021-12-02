@@ -68,9 +68,24 @@ nav ul li a:hover {
   padding: 1em;
 }
 
-h2, p {
+h2, p, h3, h1 {
   text-align: center;
   font-family: "Roboto", sans-serif;
+}
+
+.grand-marshalls {
+  border: solid 8px #80c5ed;
+  margin: 0.5em;
+  padding: 0.5em;
+  max-width: 100%;
+  background-color: #0a163c;
+  color: #fff;
+}
+.grand-marshalls .grand-marshall-img {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 footer {
@@ -149,6 +164,14 @@ a {
   nav {
     grid-row: 2/3;
     grid-column: 1/4;
+  }
+
+  .grand-marshalls {
+    margin: 7em;
+    padding: 4em;
+  }
+  .grand-marshalls .grand-marshall-img {
+    border: solid 8px #80c5ed;
   }
 
   .flyer-div {
