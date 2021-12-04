@@ -76,6 +76,12 @@ h2, p, h3, h1 {
     margin: 0 auto;
   }
 }
+.map-main {
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 100%;
+  text-align: center;
+}
 footer {
   text-align: center;
   vertical-align: center;
@@ -190,8 +196,11 @@ footer {
   .ent-schedule {
     display: flex;
     flex-flow: row;
+    max-width: 100%;
+    padding: 1em;
     .ent-1, .ent-2 {
-      margin: .5em;
+      margin: auto;
+      width:50%;
     }
   }
   // vendor med 
@@ -230,5 +239,8 @@ footer {
   }
   .events-schedule {
     width: 90%;
+  }
+  .map-main {
+    width: 50%;
   }
 }
