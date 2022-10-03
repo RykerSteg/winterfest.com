@@ -37,12 +37,18 @@ nav ul{
 .logoimg {
   max-width: 100%;
 }
+.main {
+  max-width: 100%;
+}
 .landing-div {
+  max-width: 90%;
   margin: 0 auto;
   text-align: center;
+  padding:1em;
+  
   .landing-img {
     text-align: center;
-    padding: 1em;
+    max-width: 100%;
   }
 }
 .flyer-div {

@@ -4,6 +4,10 @@
     transform: scale(1.25);
   }
 }
+body {
+  max-width: 100%;
+}
+
 header, footer {
   background-color: #80c5ed;
 }
@@ -45,19 +49,17 @@ nav ul li a:hover {
   max-width: 100%;
 }
 
-.main {
-  max-width: 100%;
-}
-
 .landing-div {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   padding: 1em;
+  display: block;
 }
 .landing-div .landing-img {
-  text-align: center;
+  padding: 1em;
   max-width: 100%;
+  display: block;
 }
 
 .flyer-div {
@@ -299,4 +301,4 @@ a {
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=indes.css.map */
