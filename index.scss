@@ -37,6 +37,14 @@ nav ul{
 .logoimg {
   max-width: 100%;
 }
+.landing-div {
+  margin: 0 auto;
+  text-align: center;
+  .landing-img {
+    text-align: center;
+    padding: 1em;
+  }
+}
 .flyer-div {
   max-width: 100%;
   padding:1em;
@@ -125,6 +133,24 @@ footer {
   &:hover {
     background-color: $nav-color;
     border-color: $body-color;
+  }
+}
+.vendor-link {
+  margin: auto;
+  text-align: center;
+  padding: 2em;
+  margin-bottom: 2em;
+  a {
+    background-color: $nav-color;
+    color: $nav-text-color;
+    text-decoration: none;
+    padding: .5em;
+    font-family: $font;
+    font-weight: 900;
+    &:hover {
+      background-color: $nav-hover-color;
+      color: $nav-hover-text;
+    }
   }
 }
 

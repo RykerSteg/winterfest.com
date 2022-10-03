@@ -17,7 +17,7 @@ nav ul {
 nav ul li a {
   display: block;
   background-color: #0a163c;
-  color: #ffff;
+  color: white;
   text-align: center;
   padding: 0.5em;
   height: 100%;
@@ -43,6 +43,15 @@ nav ul li a:hover {
 
 .logoimg {
   max-width: 100%;
+}
+
+.landing-div {
+  margin: 0 auto;
+  text-align: center;
+}
+.landing-div .landing-img {
+  text-align: center;
+  padding: 1em;
 }
 
 .flyer-div {
@@ -142,6 +151,25 @@ a {
 .voting-div:hover {
   background-color: #0a163c;
   border-color: #80c5ed;
+}
+
+.vendor-link {
+  margin: auto;
+  text-align: center;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+.vendor-link a {
+  background-color: #0a163c;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+.vendor-link a:hover {
+  background-color: #80c5ed;
+  color: #0a163c;
 }
 
 @media (min-width: 36em) {
