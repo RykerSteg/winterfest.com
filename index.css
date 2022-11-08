@@ -95,9 +95,6 @@ h2, p, h3, h1, h4 {
   background-color: #0a163c;
   color: #fff;
 }
-.grand-marshalls h1 {
-  margin-top: -1em;
-}
 .grand-marshalls .grand-marshall-img {
   display: block;
   max-width: 100%;
@@ -219,6 +216,9 @@ a {
   }
   .grand-marshalls .grand-marshall-img {
     border: solid 8px #80c5ed;
+  }
+  .grand-marshalls h1 {
+    margin-top: -1em;
   }
 
   .flyer-div {
