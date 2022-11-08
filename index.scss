@@ -54,6 +54,8 @@ nav ul{
 .flyer-div {
   max-width: 100%;
   padding:1em;
+  margin: 0 auto;
+  text-align: center;
 }
 .flyer {
   margin-top:1em;
@@ -144,6 +146,11 @@ footer {
     border-color: $body-color;
   }
 }
+.vendor-div{
+  h2{
+    margin-top: 2em;
+  }
+}
 .vendor-link {
   margin: auto;
   text-align: center;
@@ -190,7 +197,7 @@ footer {
     grid-column: 1/4;
   }
   .grand-marshalls {
-    margin: 7em;
+    margin: 2em;
     padding: 4em;
     .grand-marshall-img {
       border: solid 8px $body-color;
@@ -222,6 +229,10 @@ footer {
     grid-row: 2/3;
     margin: auto;
     text-align: center;
+  }
+  .flyer-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   //activities grid med
   .flyer-grid {
