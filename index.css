@@ -63,6 +63,8 @@ nav ul li a:hover {
 .flyer-div {
   max-width: 100%;
   padding: 1em;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .flyer {
@@ -162,6 +164,10 @@ a {
   border-color: #80c5ed;
 }
 
+.vendor-div h2 {
+  margin-top: 2em;
+}
+
 .vendor-link {
   margin: auto;
   text-align: center;
@@ -211,7 +217,7 @@ a {
   }
 
   .grand-marshalls {
-    margin: 7em;
+    margin: 2em;
     padding: 4em;
   }
   .grand-marshalls .grand-marshall-img {
@@ -246,6 +252,11 @@ a {
     grid-row: 2/3;
     margin: auto;
     text-align: center;
+  }
+
+  .flyer-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .flyer-grid {
