@@ -187,6 +187,10 @@ a {
   color: #0a163c;
 }
 
+.map-main img {
+  max-width: 100%;
+}
+
 @media (min-width: 36em) {
   .homeNav {
     display: grid;
