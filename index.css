@@ -95,19 +95,17 @@ h2, p, h3, h1, h4 {
 
 .grand-marshalls {
   border: solid 8px #80c5ed;
-  padding: 0.5em;
-  max-width: 100%;
+  padding: 0em;
   background-color: #0a163c;
   color: #fff;
   text-align: center;
   margin: 0 auto;
 }
 .grand-marshalls .grand-marshall-img {
-  display: block;
+  display:block;
   max-width: 100%;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 1em;
 }
 .grand-marshalls .gm-content {
   text-align: center;
@@ -226,10 +224,12 @@ a {
   }
 
   .grand-marshalls {
-    margin: 2em;
-    padding: 4em;
+    margin: 1em;
   }
-  .grand-marshalls .grand-marshall-img {
+  .grand-marshall-img {
+    text-align: center;
+  }
+  .grand-marshalls {
     border: solid 8px #80c5ed;
   }
   .grand-marshalls h1 {
