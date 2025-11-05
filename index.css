@@ -333,3 +333,322 @@ a {
 }
 
 /*# sourceMappingURL=index.css.map */
+/* ===== Winterfest layout add-ons (non-breaking) ===== */
+
+/* Keep your palette exactly */
+:root {
+  --brand: #0a163c;   /* dark blue */
+  --accent: #80c5ed;  /* light blue */
+  --text: #1a1a1a;
+  --muted: #5b6472;
+  --radius: 14px;
+}
+
+/* Simple container that won't fight your current grids */
+.container {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+/* --- HERO --- */
+.hero {
+  /* subtle section separation using your colors */
+  background:
+    linear-gradient(180deg, rgba(128,197,237,0.12) 0%, rgba(128,197,237,0.04) 70%, #ffffff 100%);
+  padding: 1.25rem 0 2rem;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;
+  align-items: center;
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+.hero-media picture,
+.hero-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 2px solid var(--accent); /* your light blue */
+  background: #fff;
+}
+.hero-copy h1 {
+  /* keep your font + general centering vibe */
+  color: var(--brand);
+  font-size: clamp(1.75rem, 2.2vw + 1rem, 2.75rem);
+  margin: 0 0 .35rem;
+  text-align: center;   /* matches your current centered headings */
+}
+.hero-copy .lead {
+  color: var(--muted);
+  font-size: 1.08rem;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+/* Buttons styled with your palette */
+.btn {
+  display: inline-block;
+  border: 2px solid var(--brand);
+  padding: .6rem 1rem;
+  border-radius: 999px;
+  font-weight: 900;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, color 120ms ease;
+}
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+.btn-outline {
+  background: #fff;
+  color: var(--brand);
+}
+.btn:hover,
+.btn:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  outline: none;
+}
+.hero-actions {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  justify-content: center; /* centered to match your site style */
+}
+
+/* --- Feature cards --- */
+.features {
+  padding: 1rem 0 2.25rem;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .9rem;
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+.card {
+  background: #fff;
+  padding: 1.1rem 1rem;
+  border: 2px solid var(--accent);  /* your light blue */
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+.card:hover,
+.card:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.07);
+  border-color: var(--brand);  /* dark blue on hover */
+  outline: none;
+  background: rgba(128,197,237,0.06);
+}
+.card h3 {
+  margin: .5rem 0 .25rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--brand);
+  text-align: left;
+}
+.card p {
+  margin: 0;
+  color: var(--muted);
+  text-align: left;
+}
+
+/* --- Accessibility niceties --- */
+a:focus,
+button:focus {
+  outline: 3px solid rgba(10,22,60,.25); /* dark blue focus */
+  outline-offset: 2px;
+}
+
+/* --- Responsive tweaks that won't affect your nav/menu --- */
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-media { order: -1; }
+}
+@media (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* === Full-width centered title banner === */
+.page-title-banner {
+  background:
+    linear-gradient(180deg, rgba(128,197,237,0.20) 0%,
+                            rgba(128,197,237,0.08) 60%,
+                            #ffffff 100%);
+  border-bottom: 2px solid #80c5ed;
+  padding: 1.25rem 1.75rem;
+  margin: 0 auto 1rem;
+}
+
+.page-title-banner .title-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-title-banner h1 {
+  margin: 0 0 .25rem;
+  color: #0a163c;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.9rem, 2.3vw + 1rem, 2.9rem);
+}
+
+.page-title-banner .subtitle {
+  margin: 0;
+  color: #5b6472;
+  font-size: 1.05rem;
+}
+
+/* === Hero features grid (Schedule + Grand Marshalls + …) === */
+.hero-features {
+  padding: .5rem 1rem 2rem;
+}
+
+.hero-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+/* 2 columns on tablets, 3–4 on wider as desired */
+@media (min-width: 40em) {
+  .hero-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 64em) {
+  .hero-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
+}
+
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 2px solid #80c5ed;     /* your light blue */
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.hero-card:hover,
+.hero-card:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.07);
+  border-color: #0a163c;          /* dark blue on hover */
+  background: rgba(128,197,237,0.06);
+  outline: none;
+}
+
+.hero-card-body {
+  padding: 1rem 1rem 1.1rem;
+  text-align: left;
+}
+
+.hero-card h3 {
+  margin: 0 0 .35rem;
+  color: #0a163c;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+
+.hero-card p {
+  margin: 0;
+  color: #5b6472;
+}
+
+/* Image-style hero card (for Schedule poster) */
+.hero-card--image .hero-card-media {
+  border-bottom: 2px solid #80c5ed;
+  background: #fff;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  overflow: hidden;
+}
+.hero-card--image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* ==== Header refinements: bigger logo + nav right aligned on desktop ==== */
+
+.logoimg {
+  max-height: 105px !important; /* larger logo */
+  width: auto;
+}
+
+/* mobile stays same as your current behavior, no change */
+
+/* desktop layout */
+@media (min-width: 37em) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .75em;
+    padding-bottom: .75em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  nav {
+    width: auto;
+  }
+
+  .homeNav {
+    display: flex;
+    gap: .75em;
+    justify-content: flex-end;
+  }
+
+  .homeNav li a {
+    font-size: 1rem !important;
+    padding: .55em 1em !important;
+  }
+
+  .logoimg {
+    max-height: 105px !important;  /* keeps logo strong brand presence */
+    padding: 0 !important;
+    max-width: none !important;
+  }
+}
+/* ===== Title Banner Video Button ===== */
+.title-btn-wrap {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.title-video-btn {
+  display: inline-block;
+  background-color: #0a163c;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  padding: .65em 1.4em;
+  border-radius: 999px;
+  border: 2px solid #0a163c;
+  font-size: 1rem;
+  transition: all 120ms ease;
+}
+
+.title-video-btn:hover,
+.title-video-btn:focus {
+  background-color: #80c5ed;
+  color: #0a163c;
+  border-color: #80c5ed;
+  transform: translateY(-2px);
+}

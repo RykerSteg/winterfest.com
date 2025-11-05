@@ -1,0 +1,147 @@
+/* ===== Winterfest layout add-ons (non-breaking) ===== */
+
+/* Keep your palette exactly */
+:root {
+    --brand: #0a163c;   /* dark blue */
+    --accent: #80c5ed;  /* light blue */
+    --text: #1a1a1a;
+    --muted: #5b6472;
+    --radius: 14px;
+  }
+  
+  /* Simple container that won't fight your current grids */
+  .container {
+    width: min(1100px, 92vw);
+    margin-inline: auto;
+  }
+  
+  /* --- HERO --- */
+  .hero {
+    /* subtle section separation using your colors */
+    background:
+      linear-gradient(180deg, rgba(128,197,237,0.12) 0%, rgba(128,197,237,0.04) 70%, #ffffff 100%);
+    padding: 1.25rem 0 2rem;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.5rem;
+    align-items: center;
+    width: min(1100px, 92vw);
+    margin-inline: auto;
+  }
+  .hero-media picture,
+  .hero-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    border: 2px solid var(--accent); /* your light blue */
+    background: #fff;
+  }
+  .hero-copy h1 {
+    /* keep your font + general centering vibe */
+    color: var(--brand);
+    font-size: clamp(1.75rem, 2.2vw + 1rem, 2.75rem);
+    margin: 0 0 .35rem;
+    text-align: center;   /* matches your current centered headings */
+  }
+  .hero-copy .lead {
+    color: var(--muted);
+    font-size: 1.08rem;
+    margin: 0 0 1rem;
+    text-align: center;
+  }
+  
+  /* Buttons styled with your palette */
+  .btn {
+    display: inline-block;
+    border: 2px solid var(--brand);
+    padding: .6rem 1rem;
+    border-radius: 999px;
+    font-weight: 900;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, color 120ms ease;
+  }
+  .btn-primary {
+    background: var(--brand);
+    color: #fff;
+  }
+  .btn-outline {
+    background: #fff;
+    color: var(--brand);
+  }
+  .btn:hover,
+  .btn:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    outline: none;
+  }
+  .hero-actions {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    justify-content: center; /* centered to match your site style */
+  }
+  
+  /* --- Feature cards --- */
+  .features {
+    padding: 1rem 0 2.25rem;
+  }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .9rem;
+    width: min(1100px, 92vw);
+    margin-inline: auto;
+  }
+  .card {
+    background: #fff;
+    padding: 1.1rem 1rem;
+    border: 2px solid var(--accent);  /* your light blue */
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    text-align: left;
+    transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
+  }
+  .card:hover,
+  .card:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.07);
+    border-color: var(--brand);  /* dark blue on hover */
+    outline: none;
+    background: rgba(128,197,237,0.06);
+  }
+  .card h3 {
+    margin: .5rem 0 .25rem;
+    font-family: "Roboto", sans-serif;
+    color: var(--brand);
+    text-align: left;
+  }
+  .card p {
+    margin: 0;
+    color: var(--muted);
+    text-align: left;
+  }
+  
+  /* --- Accessibility niceties --- */
+  a:focus,
+  button:focus {
+    outline: 3px solid rgba(10,22,60,.25); /* dark blue focus */
+    outline-offset: 2px;
+  }
+  
+  /* --- Responsive tweaks that won't affect your nav/menu --- */
+  @media (max-width: 960px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+    }
+    .hero-media { order: -1; }
+  }
+  @media (max-width: 900px) {
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+  }
