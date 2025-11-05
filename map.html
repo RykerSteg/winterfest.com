@@ -1,66 +1,138 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale">
-        <title>La Verkin Winterfest</title>
-        <meta name="description" content="La Verkin City Winterfest">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    </head>
-    <body>
-      <header>
-        <a href="index.html"><img class="logoimg" src="imgs/2021/LV_WinterFest_Update.png"></a>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schedule & Map | La Verkin Winterfest</title>
+    <meta name="description" content="La Verkin City Winterfest — Schedule, maps, parade route, info booth, and road closures.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous">
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img class="logoimg" src="imgs/2021/LV_WinterFest_Update.png" alt="La Verkin Winterfest Logo">
+      </a>
       <nav>
         <ul class="homeNav">
           <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="activities.html">Activities</a></li>
-            <li><a href="vendors.html">Vendors</a></li>
-            <li><a href="signups.html">Sign Ups</a></li>
-            <!-- <li><a href="">Continuous Entertainment</a></li> -->
-            <li><a href="map.html">Schedule & Map</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="signups.html">Sign Ups</a></li>
+          <li class="active"><a href="map.html">Schedule &amp; Map</a></li>
         </ul>
       </nav>
     </header>
-        <main class='map-main'>
-          <div class="flyer-grid">
-            <a href="Maps/schedule.html">
-              <h4>Schedule of Events</h3>
-              <img class="flyer left" src="flyers/2025/Winterfest Schedule 2025">
-            </a>
-            <a href="Maps/winterfestmap.html">
-              <h4>2024 Winterfest Guide</h4>
-              <img class="flyer center" src="Maps/2025/Winterfest_Map_25.png">
-            </a>
-            <a href="Maps/information.html">
-              <h4>Information Booth</h3>
-              <img class="flyer right" src="flyers/2024/Information Booth.png">
-            </a>
-            <a href="Maps/Parademap.html">
-              <h4>Parade Route</h4>
-              <img class="flyer left" src="Maps/2025/Parade Map 25.png">
-            </a>
-            <a href="Maps/streetclosed.html">
-              <h4>Road Closure</h4>
-              <img class="flyer center" src="flyers/2025/Street Closure 25.png"
-            </a>
-          </div>
-        </main>
-        <footer>
-          <div class="socialIcons">
-            <a href="https://www.facebook.com/Winterfest-LaVerkin-City-112227191230099"><i class="fab fa-facebook fa-3x"></i></a>
-            <a href="https://www.instagram.com/laverkinwf/"><i class="fab fa-instagram fa-3x"></i></a>
-          </div>
-          <div class="signature">
-            Created by Ryker Steglich | 2021 |
-          </div>
-        </footer>
-        <script src="js/main.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script src="js/fontload.js"></script>
 
-    </body>
-    
+    <main class="main">
+
+      <!-- Solid (non-transparent) title banner for interior pages -->
+      <section class="page-title-banner page-title-banner--solid">
+        <div class="title-wrap">
+          <h1>Schedule &amp; Map</h1>
+          <p class="subtitle">Find the day’s events, festival guide, parade route, info booth, and road closures.</p>
+        </div>
+      </section>
+
+      <!-- Feature grid of schedule/maps items (same card style as home) -->
+      <section class="hero-features">
+        <div class="hero-grid">
+
+          <!-- Schedule of Events -->
+          <a class="hero-card hero-card--image" href="Maps/schedule.html">
+            <div class="hero-card-media">
+              <!-- Rename your file to remove spaces and include an extension, or URL-encode spaces -->
+              <!-- Example: flyers/2025/winterfest-schedule-2025.jpg -->
+              <img
+                src="flyers/2025/Winterfest Schedule 2025"
+                alt="Winterfest 2025 Schedule Poster">
+            </div>
+            <div class="hero-card-body">
+              <h3><i class="fas fa-calendar-alt" aria-hidden="true"></i> Schedule of Events</h3>
+              <p>Times and stages for the full day.</p>
+            </div>
+          </a>
+
+          <!-- Festival Guide / Map -->
+          <a class="hero-card hero-card--image" href="Maps/winterfestmap.html">
+            <div class="hero-card-media">
+              <img
+                src="Maps/2025/Winterfest_Map_25.png"
+                alt="Winterfest Festival Guide Map">
+            </div>
+            <div class="hero-card-body">
+              <h3><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Festival Guide</h3>
+              <p>Locations for vendors, stages, parking, &amp; more.</p>
+            </div>
+          </a>
+
+          <!-- Information Booth -->
+          <a class="hero-card hero-card--image" href="Maps/information.html">
+            <div class="hero-card-media">
+              <img
+                src="flyers/2024/Information%20Booth.png"
+                alt="Information Booth Details">
+            </div>
+            <div class="hero-card-body">
+              <h3><i class="fas fa-info-circle" aria-hidden="true"></i> Information Booth</h3>
+              <p>Get help and answers on-site.</p>
+            </div>
+          </a>
+
+          <!-- Parade Route -->
+          <a class="hero-card hero-card--image" href="Maps/Parademap.html">
+            <div class="hero-card-media">
+              <img
+                src="Maps/2025/Parade%20Map%2025.png"
+                alt="Parade Route Map">
+            </div>
+            <div class="hero-card-body">
+              <h3><i class="fas fa-route" aria-hidden="true"></i> Parade Route</h3>
+              <p>Best viewing areas and staging details.</p>
+            </div>
+          </a>
+
+          <!-- Road Closures -->
+          <a class="hero-card hero-card--image" href="Maps/streetclosed.html">
+            <div class="hero-card-media">
+              <img
+                src="flyers/2025/Street%20Closure%2025.png"
+                alt="Road Closure Map">
+            </div>
+            <div class="hero-card-body">
+              <h3><i class="fas fa-road" aria-hidden="true"></i> Road Closures</h3>
+              <p>Know which streets are closed and when.</p>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="socialIcons">
+        <a href="https://www.facebook.com/Winterfest-LaVerkin-City-112227191230099" aria-label="Facebook">
+          <i class="fab fa-facebook fa-3x" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/laverkinwf/" aria-label="Instagram">
+          <i class="fab fa-instagram fa-3x" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="signature">
+        Created by Ryker Steglich | 2021 |
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="js/fontload.js"></script>
+  </body>
 </html>
