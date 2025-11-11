@@ -652,3 +652,264 @@ button:focus {
   border-color: #80c5ed;
   transform: translateY(-2px);
 }
+/* ===== GRAND MARSHALL SECTION ===== */
+.grand-marshall-section {
+  padding: 2rem 1rem;
+  background: #ffffff;
+}
+
+.gm-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gm-photo img {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 12px;
+  border: 4px solid #80c5ed;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.gm-bio {
+  flex: 1 1 400px;
+  max-width: 600px;
+  font-family: "Roboto", sans-serif;
+  color: #0a163c;
+}
+
+.gm-bio h2 {
+  font-weight: 900;
+  margin-top: 0;
+  color: #0a163c;
+}
+
+.gm-bio p {
+  font-size: 1.05rem;
+  color: #5b6472;
+  line-height: 1.6;
+}
+
+/* responsive stacking for smaller screens */
+@media (max-width: 900px) {
+  .gm-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .gm-photo img {
+    max-width: 90%;
+  }
+}
+/* ===== Grand Marshals: long-bio readability upgrades ===== */
+
+.grand-marshall-section {
+  padding: 2rem 1rem;
+  background: #ffffff;
+}
+
+.gm-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Side-by-side on medium+ screens */
+@media (min-width: 900px) {
+  .gm-container {
+    grid-template-columns: minmax(320px, 460px) 1fr;
+    gap: 2rem;
+  }
+}
+
+.gm-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 4px solid #80c5ed;   /* your light blue */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  background: #fff;
+}
+
+/* Bio typography */
+.gm-bio {
+  font-family: "Roboto", sans-serif;
+  color: #0a163c;               /* your dark blue for headings */
+  max-width: 64ch;              /* readable line length on narrow viewports */
+}
+
+/* On wide screens, allow two-column reading to shorten scroll */
+@media (min-width: 1100px) {
+  .gm-bio {
+    max-width: none;            /* let columns use the available width */
+    column-count: 2;
+    column-gap: 2rem;
+  }
+  .gm-bio h2 {
+    column-span: all;           /* keep the heading above both columns */
+  }
+}
+
+/* Prevent awkward breaks */
+.gm-bio p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5b6472;               /* muted body text */
+  break-inside: avoid;
+  margin: 0 0 1rem;
+}
+
+/* Lead intro paragraph slightly larger for engagement */
+.gm-bio .lead {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #0a163c;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Heading style */
+.gm-bio h2 {
+  margin: 0 0 .5rem;
+  font-weight: 900;
+  color: #0a163c;
+}
+
+/* Optional: soft divider above/below section for separation */
+.grand-marshall-section {
+  border-top: 2px solid #80c5ed10;  /* subtle */
+  border-bottom: 2px solid #80c5ed10;
+  border-radius: 10px;
+}
+
+/* Optional: keep image visible while skimming (desktop only) */
+@media (min-width: 1100px) {
+  .gm-photo {
+    position: sticky;
+    top: 1rem;  /* adjusts how early it sticks */
+  }
+}
+/* ==== "Read Full Bio" toggle styling ==== */
+
+.gm-bio details {
+  margin-top: 1rem;
+}
+
+.gm-bio summary {
+  cursor: pointer;
+  display: inline-block;
+  padding: .55em 1.25em;
+  border: 2px solid #0a163c;
+  border-radius: 999px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  color: #0a163c;
+  user-select: none;
+  transition: all 150ms ease;
+}
+
+.gm-bio summary:hover {
+  background-color: #80c5ed;
+  color: #0a163c;
+}
+
+.gm-bio details[open] summary {
+  background-color: #0a163c;
+  color: #fff;
+}
+
+.gm-bio p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #5b6472;
+}
+
+.gm-bio .lead {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #0a163c;
+  font-weight: 500;
+}
+/* === Disable columns on Grand Marshals bio (keep single column) === */
+.gm-bio {
+  column-count: initial !important;
+  column-gap: normal !important;
+  max-width: 64ch; /* keep a readable line length */
+}
+.gm-bio h2 { column-span: none !important; }
+
+/* ensure it stays single-column even on wide screens */
+@media (min-width: 1100px) {
+  .gm-bio { column-count: initial !important; }
+}
+
+/* optional: improve readability (since global p is centered) */
+.gm-bio .lead,
+.gm-bio p { text-align: left; }
+/* === Center the "Read full bio" button under lead paragraph === */
+.gm-bio summary {
+  display: block;
+  margin: 1rem auto 1rem auto;  /* centers horizontally */
+  text-align: center;
+}
+/* ===== Enhanced Read/Show toggle styling ===== */
+
+/* center both buttons */
+.bio-toggle summary {
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid #0a163c;
+  border-radius: 999px;
+  padding: .55em 1.25em;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  color: #0a163c;
+  background: none;
+  transition: all 150ms ease;
+  user-select: none;
+}
+
+.bio-toggle summary:hover {
+  background-color: #80c5ed;
+  color: #0a163c;
+}
+
+.bio-toggle[open] .summary-open {
+  display: none;  /* hide Read button when open */
+}
+
+.bio-toggle:not([open]) .summary-close {
+  display: none;  /* hide Show Less button when closed */
+}
+
+/* make the Show less button match hover style */
+.bio-toggle .summary-close {
+  background-color: #0a163c;
+  color: #fff;
+  border-color: #0a163c;
+  margin-top: 1.5rem;
+}
+
+.bio-toggle .summary-close:hover {
+  background-color: #80c5ed;
+  color: #0a163c;
+}
+
+/* optional: smooth open/close animation */
+.bio-content {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  margin-top: .5rem;
+}
