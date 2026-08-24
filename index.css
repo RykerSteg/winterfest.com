@@ -913,3 +913,195 @@ button:focus {
   transition: all 0.3s ease-in-out;
   margin-top: .5rem;
 }
+/* =========================================================
+   Winterfest — Vendor page
+   All selectors are namespaced with .vendor- so they won't
+   collide with existing styles. Adjust the color variables
+   below to match your site palette.
+   ========================================================= */
+
+   .vendor-page {
+    --vendor-accent:      #1f6f8b;  /* deep winter blue — buttons, icons */
+    --vendor-accent-dark: #164f63;  /* hover state */
+    --vendor-ink:         #23303a;  /* headings / body text */
+    --vendor-muted:       #5c6b74;  /* secondary text */
+    --vendor-tint:        #eef4f7;  /* soft panel background */
+    --vendor-border:      #d6e0e5;  /* hairline borders */
+  
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 3.5rem;
+    color: var(--vendor-ink);
+  }
+  /* --- Intro ------------------------------------------------ */
+.vendor-page__intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.vendor-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--vendor-tint);
+  color: var(--vendor-accent-dark);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.vendor-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+}
+.vendor-lead {
+  max-width: 34rem;
+  margin: 0 auto;
+  color: var(--vendor-muted);
+  line-height: 1.6;
+}
+
+/* --- Two-column layout ------------------------------------ */
+.vendor-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (min-width: 760px) {
+  .vendor-layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* --- Flyer ------------------------------------------------- */
+.vendor-flyer {
+  margin: 0;
+  background: var(--vendor-tint);
+  border: 1px solid var(--vendor-border);
+  border-radius: 14px;
+  padding: 12px;
+}
+.vendor-flyer__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.vendor-flyer__cap {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--vendor-muted);
+  margin-top: 10px;
+}
+
+/* --- Details column --------------------------------------- */
+.vendor-details { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.vendor-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--vendor-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 10px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.vendor-cta:hover  { background: var(--vendor-accent-dark); }
+.vendor-cta:active { transform: scale(0.98); }
+.vendor-cta:focus-visible {
+  outline: 3px solid var(--vendor-accent);
+  outline-offset: 2px;
+}
+
+/* --- Fact list -------------------------------------------- */
+.vendor-facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--vendor-border);
+}
+.vendor-facts li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--vendor-border);
+}
+.vendor-facts i {
+  color: var(--vendor-accent);
+  width: 18px;
+  text-align: center;
+  margin-top: 3px;
+}
+.vendor-facts strong { font-weight: 600; }
+
+/* --- Notes box -------------------------------------------- */
+.vendor-notes {
+  background: var(--vendor-tint);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+}
+.vendor-notes__title {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+}
+.vendor-notes ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--vendor-muted);
+  line-height: 1.7;
+}
+
+/* --- Closing CTA ------------------------------------------ */
+.vendor-closing {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 2rem 1.25rem;
+  background: var(--vendor-tint);
+  border-radius: 14px;
+}
+.vendor-closing p {
+  margin: 0 0 1rem;
+  font-weight: 600;
+  color: var(--vendor-accent-dark);
+}
+
+/* --- Reduced motion --------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .vendor-cta { transition: none; }
+}
+/* --- Booth pricing ---------------------------------------- */
+.vendor-pricing {
+  border-top: 1px solid var(--vendor-border);
+  padding-top: 1.25rem;
+}
+.vendor-pricing__title {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+.vendor-pricing ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.vendor-pricing li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 0;
+  line-height: 1.4;
+}
+.vendor-price {
+  flex: 0 0 auto;
+  min-width: 3.4rem;
+  font-weight: 700;
+  color: var(--vendor-accent);
+}
