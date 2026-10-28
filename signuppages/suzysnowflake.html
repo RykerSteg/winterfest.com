@@ -2,16 +2,16 @@
 <html lang="en-us">
     <head>
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale">
-        <title>La Verkin Winterfest</title>
-        <meta name="description" content="La Verkin City Winterfest">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Suzy Snowflake Pageant | La Verkin Winterfest</title>
+        <meta name="description" content="Sign up for the Suzy Snowflake Pageant at La Verkin Winterfest. Ages 3-6, December 5, 2026 at 11 AM, 111 S. Main St., La Verkin.">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="/index.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     </head>
     <body>
       <header>
-        <a href="/index.html"><img class="logoimg" src="/imgs/2021/LV_WinterFest_Update.png"></a>
+        <a href="/index.html"><img class="logoimg" src="/imgs/2021/LV_WinterFest_Update.png" alt="La Verkin Winterfest logo"></a>
       <nav>
         <ul class="homeNav">
           <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
@@ -19,28 +19,83 @@
             <li><a href="/activities.html">Activities</a></li>
             <li><a href="/vendors.html">Vendors</a></li>
             <li class="active"><a href="/signups.html">Sign Ups</a></li>
-            <li><a href="/map.html">Schedule & Map</a></li>
+            <li><a href="/map.html">Schedule &amp; Map</a></li>
         </ul>
       </nav>
     </header>
-        <main class='main'>
-          <div class="signups">
-            <div class="suzysignup" id="weeonesignup">
-              <h2>Suzy Snowflake Pageant</h2>
-              <!-- <h3>More Information Coming Soon!</h3> -->
-              <div class="vendor-link">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo7JOMF_U_MIeshzDSFkkOscdnxc-OuHr85_j682vOnkFNIQ/viewform">Click Here to Sign Up!</a>
-              </div>
-              <div class="vendor-div">
-                <img class="flyer" src="/flyers/2025/Suzy Snowflake 2025.png">
-              </div>
-            </div>
+
+    <main class="main">
+      <section class="vendor-page">
+
+        <div class="vendor-page__intro">
+          <span class="vendor-eyebrow"><i class="fas fa-snowflake" aria-hidden="true"></i> Sign Ups</span>
+          <h1 class="vendor-title">Suzy Snowflake Pageant</h1>
+          <p class="vendor-lead">
+            A Winterfest pageant for ages 3&ndash;6.
+            Join us Saturday, December 5 at 11 AM.
+          </p>
+        </div>
+
+        <div class="vendor-layout">
+
+          <!-- Flyer: framed and clickable -->
+          <figure class="vendor-flyer">
+            <a href="/flyers/2026/Suzy Snowflake Flyer (8.5 x 11 in) (1).png" target="_blank" rel="noopener">
+              <img class="vendor-flyer__img"
+                   src="/flyers/2026/Suzy Snowflake Flyer (8.5 x 11 in) (1).png"
+                   alt="Suzy Snowflake Pageant flyer: ages 3-6, December 5, 2026 at 11 AM, 111 S. Main St., La Verkin">
+            </a>
+            <figcaption class="vendor-flyer__cap">
+              <i class="fas fa-search-plus" aria-hidden="true"></i> Click to view full size
+            </figcaption>
+          </figure>
+
+          <!-- Details in real, readable HTML -->
+          <div class="vendor-details">
+            <a class="vendor-cta" href="https://forms.gle/S7DyjHASVH4t955T6" target="_blank" rel="noopener">
+              <i class="fas fa-file-alt" aria-hidden="true"></i> Sign up for the pageant
+            </a>
+
+            <ul class="vendor-facts">
+              <li>
+                <i class="fas fa-child" aria-hidden="true"></i>
+                <span><strong>Ages</strong> &mdash; 3 to 6</span>
+              </li>
+              <li>
+                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                <span><strong>Date</strong> &mdash; Saturday, December 5, 2026</span>
+              </li>
+              <li>
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                <span><strong>Time</strong> &mdash; 11:00 AM</span>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <span><strong>Location</strong> &mdash; 111 S. Main St., La Verkin</span>
+              </li>
+              <li>
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <span><strong>Questions?</strong> Call Martha at <a href="tel:+14358170035">435-817-0035</a></span>
+              </li>
+            </ul>
           </div>
-        </main>
+
+        </div>
+
+        <div class="vendor-closing">
+          <p>Looking for other ways to get involved?</p>
+          <a class="vendor-cta" href="/signups.html">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to all sign ups
+          </a>
+        </div>
+
+      </section>
+    </main>
+
         <footer>
           <div class="socialIcons">
-            <a href="https://www.facebook.com/Winterfest-LaVerkin-City-112227191230099"><i class="fab fa-facebook fa-3x"></i></a>
-            <a href="https://www.instagram.com/laverkinwf/"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="https://www.facebook.com/Winterfest-LaVerkin-City-112227191230099" aria-label="Winterfest on Facebook"><i class="fab fa-facebook fa-3x"></i></a>
+            <a href="https://www.instagram.com/laverkinwf/" aria-label="Winterfest on Instagram"><i class="fab fa-instagram fa-3x"></i></a>
           </div>
           <div class="signature">
             Created by Ryker Steglich | 2021 |

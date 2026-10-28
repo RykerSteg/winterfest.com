@@ -2,50 +2,126 @@
 <html lang="en-us">
     <head>
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale">
-        <title>La Verkin Winterfest</title>
-        <meta name="description" content="La Verkin City Winterfest">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sign Ups | La Verkin Winterfest</title>
+        <meta name="description" content="Sign up for La Verkin City Winterfest events: the 5k/10k, Talentfest, Light Parade, Suzy Snowflake, Winter Wee Ones, and vendor booths.">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     </head>
     <body>
       <header>
-        <a href="index.html"><img class="logoimg" src="imgs/2021/LV_WinterFest_Update.png"></a>
+        <a href="index.html"><img class="logoimg" src="imgs/2021/LV_WinterFest_Update.png" alt="La Verkin Winterfest logo"></a>
       <nav>
         <ul class="homeNav">
           <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="activities.html">Activities</a></li>
             <li><a href="vendors.html">Vendors</a></li>
-            <li><a href="signups.html">Sign Ups</a></li>
+            <li class="active"><a href="signups.html">Sign Ups</a></li>
             <!-- <li><a href="">Continuous Entertainment</a></li> -->
             <li><a href="map.html">Schedule & Map</a></li>
         </ul>
       </nav>
     </header>
     <main class='main'>
-      <h2>More Information Coming Soon!</h2>
-      <!-- <div class="flyer-grid">
-        <a href="signuppages/5k10k.html">
-          <img class="flyer left" style="border: 0;" src="flyers/2024/buttons/5k10k">
-        </a>
-        <a href="vendors.html">
-          <img class="flyer center" style="border: 0;" src="flyers/2024/buttons/vendors">
-        </a>
-        <a href="signuppages/talenfest.html">
-          <img class=" flyer right" style="border: 0;" src="flyers/2024/buttons/Talentfest">
-        </a>
-        <a href="signuppages/lightparade.html">
-          <img class="flyer left" style="border: 0;" src="flyers/2024/buttons/lightparade">
-        </a>
-        <a href="signuppages/suzysnowflake.html">
-          <img class="flyer center" style="border: 0;" src="flyers/2024/buttons/suzysnowflake">
-        </a>
-        <a href="signuppages/weeones.html">
-          <img class="flyer right" style="border: 0;" src="flyers/2024/buttons/Weeones">
-        </a>
-      </div> -->
+      <!-- "vendor-page" is kept so this page shares the vendors page palette-->
+      <section class="vendor-page signup-page">
+
+        <div class="vendor-page__intro">
+          <span class="vendor-eyebrow"><i class="fas fa-clipboard-list" aria-hidden="true"></i>Sign Ups</span>
+          <h1 class="vendor-title">Get involved in Winterfest</h1>
+          <p class="vendor-lead">Run, perform, or set up a booth. Pick an event below to sign up. Spots may be limited, so register early.</p>
+        </div>
+        <!--
+          HOW TO TOGGLE A CARD
+          OPEN:   
+            badge= <span class"signup-badge signup-badge--open">Open</span>
+            button= <a class="signup-btn" href-"...">Sign up</a>
+          Coming Soon:
+            badge= <span class="signup-badge">Coming soon</span>
+            button= <span class="signup-btn signup-btn--disabled" aria-disabled="true>Open soon</span>"
+        -->
+        <ul class="signup-grid">
+
+          <li class="signup-card">
+            <div class="signup-card__top">
+              <span class="signup-card__icon"><i class="fas fa-running" aria-hidden="true"></i></span>
+              <span class="signup-badge signup-badge--open">Open</span>
+            </div>
+            <h2 class="signup-card__title">5K / 10K Race</h2>
+            <p class="signup-card__text">Kick off Winterfest with a run through La Verkin. $25 through Nov. 12, then $30. No same-day registration.</p>
+            <p class="signup-card__meta"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Dec. 5 &middot; 9 AM</p>
+            <a class="signup-btn" href="signuppages/5k10k.html">Sign up</a>
+          </li>
+
+          <li class="signup-card">
+            <div class="signup-card__top">
+              <span class="signup-card__icon"><i class="fas fa-microphone" aria-hidden="true"></i></span>
+              <span class="signup-badge signup-badge--open">Open</span>
+            </div>
+            <h2 class="signup-card__title">Talentfest Charity Showcase</h2>
+            <p class="signup-card__text">Perform for a chance to win $300 for your chosen charity. Open to all. Applications due Nov. 10.</p>
+            <p class="signup-card__meta"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Dec. 4 &amp; 5</p>
+            <a class="signup-btn" href="signuppages/talenfest.html">Sign up</a>
+          </li>
+
+          <li class="signup-card">
+            <div class="signup-card__top">
+              <span class="signup-card__icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></span>
+              <span class="signup-badge signup-badge--open">Open</span>
+            </div>
+            <h2 class="signup-card__title">Light Parade</h2>
+            <p class="signup-card__text">Light up a float, vehicle, or walking group and roll down Main Street. Awards will be given!</p>
+            <p class="signup-card__meta"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Dec. 5 &middot; 6 PM</p>
+            <a class="signup-btn" href="signuppages/lightparade.html">Sign up</a>
+          </li>
+
+          <li class="signup-card">
+            <div class="signup-card__top">
+              <span class="signup-card__icon"><i class="fas fa-snowflake" aria-hidden="true"></i></span>
+              <span class="signup-badge signup-badge--open">Open</span>
+            </div>
+            <h2 class="signup-card__title">Suzy Snowflake Pageant</h2>
+            <p class="signup-card__text">A Winterfest pageant for our littlest snowflakes, ages 3&ndash;6.</p>
+            <p class="signup-card__meta"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Dec. 5 &middot; 11 AM</p>
+            <a class="signup-btn" href="signuppages/suzysnowflake.html">Sign up</a>
+          </li>
+
+          <li class="signup-card">
+            <div class="signup-card__top">
+              <span class="signup-card__icon"><i class="fas fa-child" aria-hidden="true"></i></span>
+              <span class="signup-badge">Coming soon</span>
+            </div>
+            <h2 class="signup-card__title">Wee Ones</h2>
+            <p class="signup-card__text">An event just for our littlest Winterfest guests. Details coming soon.</p>
+            <p class="signup-card__meta"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Date &amp; time TBA</p>
+            <span class="signup-btn signup-btn--disabled" aria-disabled="true">Opens soon</span>
+            <!-- <a class="signup-btn" href="signuppages/weeones.html">Sign up</a> -->
+          </li>
+
+          <li class="signup-card">
+            <div class="signup-card__top">
+              <span class="signup-card__icon"><i class="fas fa-store" aria-hidden="true"></i></span>
+              <span class="signup-badge signup-badge--open">Open</span>
+            </div>
+            <h2 class="signup-card__title">Vendors</h2>
+            <p class="signup-card__text">Reserve a booth for food, crafts, gifts, and holiday treats.</p>
+            <p class="signup-card__meta"><i class="fas fa-calendar-alt" aria-hidden="true"></i> December 4 &amp; 5</p>
+            <a class="signup-btn" href="vendors.html">Vendor details</a>
+          </li>
+
+        </ul>
+
+        <div class="vendor-closing">
+          <p>Quetions about signing up?</p>
+          <a class="vendor-cta" href="mailto:maridee.johnson@laverkin.gov">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </section>
+      
     </main>
         <footer>
           <div class="socialIcons">

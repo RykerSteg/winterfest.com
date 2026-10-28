@@ -1105,3 +1105,474 @@ button:focus {
   font-weight: 700;
   color: var(--vendor-accent);
 }
+/* --- Multiple flyers, stacked ----------------------------- */
+.vendor-flyers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* --- Numbered lists in note boxes ------------------------- */
+.vendor-notes ol {
+  margin: 0;
+  padding-left: 1.3rem;
+  color: var(--vendor-muted);
+  line-height: 1.7;
+}
+.vendor-notes ol li + li { margin-top: 0.35rem; }
+
+/* =========================================================
+   SIGN UPS PAGE
+   Reuses the .vendor-page palette variables and intro styles
+   ========================================================= */
+
+   .signup-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+  
+  /* --- Card ------------------------------------------------- */
+  .signup-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--vendor-border);
+    border-radius: 14px;
+    padding: 1.25rem 1.25rem 1.4rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .signup-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .signup-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+  }
+  
+  .signup-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: var(--vendor-tint);
+    color: var(--vendor-accent);
+    font-size: 1.25rem;
+  }
+  
+  .signup-card__title {
+    margin: 0 0 0.4rem;
+    font-size: 1.2rem;
+  }
+  
+  .signup-card__text {
+    margin: 0 0 0.9rem;
+    color: var(--vendor-muted);
+    line-height: 1.55;
+  }
+  
+  .signup-card__meta {
+    margin: 0 0 1.1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .signup-card__meta i { color: var(--vendor-accent); }
+  
+  /* --- Status badge ----------------------------------------- */
+  .signup-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: var(--vendor-tint);
+    color: var(--vendor-muted);
+  }
+  .signup-badge--open {
+    background: #e3f4e8;
+    color: #1f7a3d;
+  }
+  
+  /* --- Button (pinned to the card bottom) ------------------- */
+  .signup-btn {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    background: var(--vendor-accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 11px 18px;
+    border-radius: 10px;
+    transition: background 0.15s ease;
+  }
+  .signup-btn:hover { background: var(--vendor-accent-dark); }
+  .signup-btn:focus-visible {
+    outline: 3px solid var(--vendor-accent);
+    outline-offset: 2px;
+  }
+  
+  .signup-btn--disabled,
+  .signup-btn--disabled:hover {
+    background: var(--vendor-tint);
+    color: var(--vendor-muted);
+    cursor: not-allowed;
+  }
+  
+  /* --- Reduced motion --------------------------------------- */
+  @media (prefers-reduced-motion: reduce) {
+    .signup-card,
+    .signup-btn { transition: none; }
+    .signup-card:hover { transform: none; }
+  }
+
+  /* =========================================================
+   ACTIVITIES PAGE
+   Builds on the .signup-card styles
+   ========================================================= */
+
+/* --- Day filter ------------------------------------------- */
+.activity-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 0 2rem;
+}
+.activity-filter__btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid var(--vendor-border);
+  background: #fff;
+  color: var(--vendor-accent-dark);
+  cursor: pointer;
+}
+.activity-filter__btn[aria-pressed="true"] {
+  background: var(--vendor-accent);
+  border-color: var(--vendor-accent);
+  color: #fff;
+}
+.activity-filter__btn:focus-visible {
+  outline: 3px solid var(--vendor-accent);
+  outline-offset: 2px;
+}
+
+/* --- Group headings --------------------------------------- */
+.activity-group + .activity-group { margin-top: 2.5rem; }
+.activity-group__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--vendor-border);
+}
+.activity-group__title i { color: var(--vendor-accent); }
+
+/* --- When / where lines ----------------------------------- */
+.activity-meta {
+  list-style: none;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  font-size: 0.9rem;
+}
+.activity-meta li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 2px 0;
+}
+.activity-meta i {
+  color: var(--vendor-accent);
+  width: 16px;
+  text-align: center;
+  margin-top: 3px;
+}
+.activity-meta strong { font-weight: 600; }
+
+/* --- Button row ------------------------------------------- */
+.activity-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+.activity-actions .signup-btn {
+  flex: 1;
+  margin-top: 0;
+}
+
+/* Secondary outline button (Flyer) */
+.signup-btn--ghost {
+  background: transparent;
+  color: var(--vendor-accent);
+  border: 2px solid var(--vendor-accent);
+  padding: 9px 16px;
+}
+.signup-btn--ghost:hover { background: var(--vendor-tint); }
+
+/* --- Filter hiding (cards use display:flex, so hidden needs help) */
+.signup-card[hidden],
+.activity-group[hidden] { display: none; }
+/* --- Downloadable files on a card ------------------------- */
+.activity-files {
+  list-style: none;
+  margin: 0 0 1.1rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--vendor-tint);
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+.activity-files li + li { margin-top: 0.4rem; }
+.activity-files a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--vendor-accent-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+.activity-files a:hover { text-decoration: underline; }
+.activity-files i { color: var(--vendor-accent); }
+.activity-files__type {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--vendor-muted);
+}
+
+/* --- Button row with 3 buttons: primary on top, two below - */
+.activity-actions--stack { flex-wrap: wrap; }
+.activity-actions--stack .signup-btn:not(.signup-btn--ghost) { flex-basis: 100%; }
+
+/* --- Flyer strip ------------------------------------------ */
+.flyer-strip-wrap { margin: 0 0 2rem; }
+
+.flyer-strip {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0.25rem 0.25rem 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+.flyer-strip:focus-visible {
+  outline: 3px solid var(--vendor-accent);
+  outline-offset: 2px;
+}
+
+.flyer-strip__item {
+  flex: 0 0 180px;
+  scroll-snap-align: start;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease;
+}
+.flyer-strip__item:hover { transform: translateY(-3px); }
+.flyer-strip__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 760px) {
+  .flyer-strip__item { flex-basis: 220px; }
+}
+
+.flyer-strip__hint {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--vendor-muted);
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flyer-strip__item { transition: none; }
+  .flyer-strip__item:hover { transform: none; }
+}
+/* =========================================================
+   SCHEDULE & MAP PAGE
+   ========================================================= */
+
+/* --- Wednesday note bar ----------------------------------- */
+.schedule-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--vendor-tint);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  margin: 0 0 1.5rem;
+}
+.schedule-note i { color: var(--vendor-accent); margin-top: 3px; }
+
+/* --- Day panels (side by side on desktop) ----------------- */
+.schedule-days {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 900px) {
+  .schedule-days {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.schedule-day {
+  background: #fff;
+  border: 1px solid var(--vendor-border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.schedule-day__head {
+  margin: 0;
+  padding: 0.9rem 1.25rem;
+  background: var(--vendor-accent);
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+}
+.schedule-day__hours {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* --- Time rows -------------------------------------------- */
+.schedule-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.schedule-list li {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 0.75rem;
+  padding: 0.7rem 1.25rem;
+  border-top: 1px solid var(--vendor-border);
+}
+.schedule-list li:first-child { border-top: 0; }
+
+.schedule-time {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--vendor-accent-dark);
+}
+.schedule-event strong {
+  display: block;
+  font-weight: 600;
+}
+.schedule-event a { color: inherit; }
+.schedule-place {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--vendor-muted);
+  margin-top: 2px;
+}
+.schedule-place i { color: var(--vendor-accent); margin-right: 4px; }
+
+/* Big moments get a tinted row */
+.schedule-item--highlight { background: var(--vendor-tint); }
+
+/* --- Buttons under the schedule --------------------------- */
+.schedule-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+.schedule-actions .signup-btn { margin-top: 0; }
+/* --- Street closure notice -------------------------------- */
+.closure-notice {
+  margin-top: 2.25rem;
+  background: #fff8e6;
+  border: 2px solid #f0c24b;
+  border-radius: 14px;
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+.closure-notice__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: #7a5200;
+}
+.closure-notice__title i { color: #d99a00; }
+
+.closure-list {
+  list-style: none;
+  margin: 0 0 1.1rem;
+  padding: 0;
+}
+.closure-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 0.6rem 0;
+  border-top: 1px solid #f3dca0;
+  line-height: 1.5;
+}
+.closure-list li:first-child { border-top: 0; }
+.closure-list i {
+  color: #d99a00;
+  width: 18px;
+  text-align: center;
+  margin-top: 4px;
+}
+.closure-list strong { font-weight: 600; }
+
+.closure-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.closure-actions .signup-btn {
+  margin-top: 0;
+  background: #fff;
+}
+/* --- Map placeholders ------------------------------------- */
+.map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  aspect-ratio: 4 / 3;
+  background: var(--vendor-tint);
+  border: 2px dashed var(--vendor-border);
+}
+.map-placeholder i {
+  font-size: 2.75rem;
+  color: var(--vendor-accent);
+  opacity: 0.6;
+}
+
+/* Placeholder cards aren't links, so no hover lift or pointer */
+.hero-card--placeholder { cursor: default; }
+.hero-card--placeholder:hover { transform: none; }
