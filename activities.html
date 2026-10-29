@@ -37,30 +37,6 @@
           </p>
         </div>
 
-                <!-- Flyer strip: scrolls sideways, each opens full size -->
-                <div class="flyer-strip-wrap">
-                  <div class="flyer-strip" tabindex="0" aria-label="Winterfest flyers, scroll for more">
-                    <a class="flyer-strip__item" href="flyers/2026/treelighting and fun run.png" target="_blank" rel="noopener"><img src="flyers/2026/treelighting and fun run.png" loading="lazy" alt="Tree Lighting and Sweater Fun Run flyer"></a>
-                    <a class="flyer-strip__item" href="flyers/2026/Winter Carnival.png" target="_blank" rel="noopener"><img src="flyers/2026/Winter Carnival.png" loading="lazy" alt="Winter Carnival flyer"></a>
-                    <a class="flyer-strip__item" href="signuppages/lightparade.html"><img src="flyers/2026/Winterfest Light Parade  (8.5 x 11 in) (8 x 10 in).png" loading="lazy" alt="Light Parade flyer"></a>
-                    <a class="flyer-strip__item" href="vendors.html"><img src="flyers/2026/Winterfest Vendor (1).jpg" loading="lazy" alt="Winterfest vendor flyer"></a>
-                    <a class="flyer-strip__item" href="signuppages/talenfest.html"><img src="flyers/2026/Talentfest pg 1.PNG" loading="lazy" alt="Talentfest Charity Showcase flyer"></a>
-                    <a class="flyer-strip__item" href="signuppages/weeones.html"><img src="flyers/2026/ee Ones! (12 x 18 in).png" loading="lazy" alt="Winter Wee Ones Cutest Baby Contest flyer"></a>
-                    <a class="flyer-strip__item" href="signuppages/5k10k.html"><img src="flyers/2026/Winterfest Race poster (12 x 18 in).png" loading="lazy" alt="5K and 10K Race flyer"></a>
-                    <a class="flyer-strip__item" href="flyers/2026/Santa Cookie Workshop.png" target="_blank" rel="noopener"><img src="flyers/2026/Santa Cookie Workshop.png" loading="lazy" alt="Santa's Cookie Workshop flyer"></a>
-                    <a class="flyer-strip__item" href="signuppages/suzysnowflake.html"><img src="flyers/2026/Suzy Snowflake Flyer (8.5 x 11 in) (1).png" loading="lazy" alt="Suzy Snowflake Pageant flyer"></a>
-                    <a class="flyer-strip__item" href="flyers/2026/gingerbread house contest.png" target="_blank" rel="noopener"><img src="flyers/2026/gingerbread house contest.png" loading="lazy" alt="Gingerbread House Contest flyer"></a>
-                    <a class="flyer-strip__item" href="flyers/2026/Casey lofthouse (Instagram Post (Square)).png" target="_blank" rel="noopener"><img src="flyers/2026/Casey lofthouse (Instagram Post (Square)).png" loading="lazy" alt="Stout and Howard Family Concert flyer"></a>
-                    <a class="flyer-strip__item" href="flyers/2026/live nativity.png" target="_blank" rel="noopener"><img src="flyers/2026/live nativity.png" loading="lazy" alt="Live Nativity Program flyer"></a>
-                    <a class="flyer-strip__item" href="flyers/2026/Reason for the Season.png" target="_blank" rel="noopener"><img src="flyers/2026/Reason for the Season.png" loading="lazy" alt="Reason for the Season Displays flyer"></a>
-                    <a class="flyer-strip__item" href="flyers/2026/Bingo.png" target="_blank" rel="noopener"><img src="flyers/2026/Bingo.png" loading="lazy" alt="Blizzard Bingo flyer"></a>
-                    <a class="flyer-strip__item" href="flyers/2026/cornhole.png" target="_blank" rel="noopener"><img src="flyers/2026/cornhole.png" loading="lazy" alt="Cornhole Tournament flyer"></a>
-                    <a class="flyer-strip__item" href="flyers/2026/s'more kits.png" target="_blank" rel="noopener"><img src="flyers/2026/s'more kits.png" loading="lazy" alt="S'mores Around the Campfire flyer"></a>
-                    <a class="flyer-strip__item" href="flyers/2026/information booth.png" target="_blank" rel="noopener"><img src="flyers/2026/information booth.png" loading="lazy" alt="Information Booth flyer"></a>
-                  </div>
-                  <p class="flyer-strip__hint">Scroll for more flyers <i class="fas fa-arrow-right" aria-hidden="true"></i></p>
-                </div>
-
         <!-- Day filter -->
         <div class="activity-filter" role="group" aria-label="Filter activities by day">
           <button type="button" class="activity-filter__btn" data-filter="all" aria-pressed="true">All</button>
@@ -71,24 +47,23 @@
         <!--
           CARD TEMPLATE: copy into a group's list to add an activity.
           data-days: "fri", "sat", or "fri sat" (controls the day filter).
-          Delete the badge, either button, or the whole actions div if not needed.
+          Use the same link for the flyer and the button.
 
-          <li class="signup-card" data-days="sat">
-            <div class="signup-card__top">
-              <span class="signup-card__icon"><i class="fas fa-star" aria-hidden="true"></i></span>
-              <span class="signup-badge">Free</span>
-            </div>
-            <h3 class="signup-card__title">Activity name</h3>
-            <p class="signup-card__text">One or two sentences about the activity.</p>
-            <ul class="activity-meta">
-              <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; TIME</span></li>
-              <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>LOCATION</span></li>
-            </ul>
-            <div class="activity-actions">
-              <a class="signup-btn" href="signuppages/PAGE.html">Sign up</a>
-              <a class="signup-btn signup-btn--ghost" href="flyers/2026/FLYER.png" target="_blank" rel="noopener">Flyer</a>
-            </div>
+          <li class="signup-card activity-card" data-days="sat">
+            <h3 class="activity-card__title">Activity name</h3>
+            <a class="activity-card__flyer" href="activitypages/PAGE.html">
+              <img src="flyers/2026/FLYER.png" loading="lazy" alt="Activity name flyer">
+            </a>
+            <a class="signup-btn" href="activitypages/PAGE.html">Learn more</a>
           </li>
+
+          NO FLYER YET: swap the flyer link for this placeholder, and the button for a disabled one:
+
+            <div class="activity-card__flyer activity-card__flyer--placeholder">
+              <i class="fas fa-snowflake" aria-hidden="true"></i>
+              <span>Flyer coming soon</span>
+            </div>
+            <span class="signup-btn signup-btn--disabled" aria-disabled="true">Details coming soon</span>
         -->
 
         <!-- ===== SIGN-UPS & COMPETITIONS ===== -->
@@ -96,147 +71,68 @@
           <h2 class="activity-group__title"><i class="fas fa-clipboard-list" aria-hidden="true"></i> Sign-ups &amp; competitions</h2>
           <ul class="signup-grid activity-grid">
 
-            <li class="signup-card" data-days="fri">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-home" aria-hidden="true"></i></span>
-                <span class="signup-badge signup-badge--open">Enter Dec. 2</span>
-              </div>
-              <h3 class="signup-card__title">Gingerbread House Contest</h3>
-              <p class="signup-card__text">Build a house from any materials you like. $200 grand prize, plus prizes for youth and family division winners.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-box-open" aria-hidden="true"></i><span><strong>Drop off:</strong> Wed. Dec. 2 &middot; 6&ndash;8 PM, 111 S Main St.</span></li>
-                <li><i class="fas fa-trophy" aria-hidden="true"></i><span><strong>Winners:</strong> Fri. Dec. 4 at the Tree Lighting</span></li>
-                <li><i class="fas fa-phone" aria-hidden="true"></i><span>Questions? <a href="tel:+14356693325">(435) 669-3325</a></span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/gingerbread house contest.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri">
+              <h3 class="activity-card__title">Gingerbread House Contest</h3>
+              <a class="activity-card__flyer" href="activitypages/gingerbread.html">
+                <img src="flyers/2026/gingerbread house contest.png" loading="lazy" alt="Gingerbread House Contest flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/gingerbread.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="fri">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-tshirt" aria-hidden="true"></i></span>
-                <span class="signup-badge">Free</span>
-              </div>
-              <h3 class="signup-card__title">Christmas Sweater Fun Run</h3>
-              <p class="signup-card__text">Wear your best holiday sweater and run from Wanlass Park to the Tree Lighting, where winners are announced.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Fri. Dec. 4 &middot; Judging 4:00 PM, race 4:30 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Wanlass Park to 111 S Main St.</span></li>
-              </ul>
-              <ul class="activity-files">
-                <li>
-                  <a href="flyers/2026/Fun run coloring pages.pdf" download>
-                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Coloring pages <span class="activity-files__type">PDF</span>
-                  </a>
-                </li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/treelighting and fun run.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri">
+              <h3 class="activity-card__title">Christmas Sweater Fun Run</h3>
+              <a class="activity-card__flyer" href="activitypages/treelighting.html">
+                <img src="flyers/2026/treelighting and fun run.png" loading="lazy" alt="Christmas Sweater Fun Run and Tree Lighting flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/treelighting.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="fri sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-microphone" aria-hidden="true"></i></span>
-                <span class="signup-badge signup-badge--open">Sign up</span>
-              </div>
-              <h3 class="signup-card__title">Talentfest Charity Showcase</h3>
-              <p class="signup-card__text">Perform for a chance to win $300 for your chosen charity. Applications due Nov. 10.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Fri. 5:30 PM &amp; Sat. 11 AM &middot; Awards Sat. 1:15 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>111 S Main St.</span></li>
-              </ul>
-              <div class="activity-actions activity-actions--stack">
-                <a class="signup-btn" href="signuppages/talenfest.html">Sign up</a>
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Talentfest pg 1.PNG" target="_blank" rel="noopener">Flyer</a>
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Talentfest pg 2.PNG" target="_blank" rel="noopener">How it works</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri sat">
+              <h3 class="activity-card__title">Talentfest Charity Showcase</h3>
+              <a class="activity-card__flyer" href="signuppages/talenfest.html">
+                <img src="flyers/2026/Talentfest pg 1.PNG" loading="lazy" alt="Talentfest Charity Showcase flyer">
+              </a>
+              <a class="signup-btn" href="signuppages/talenfest.html">Sign up</a>
             </li>
 
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-running" aria-hidden="true"></i></span>
-                <span class="signup-badge signup-badge--open">Sign up</span>
-              </div>
-              <h3 class="signup-card__title">5K &amp; 10K Race</h3>
-              <p class="signup-card__text">Kick off Saturday with a run through La Verkin. $25 through Nov. 12, then $30. No same-day registration.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; 9:00 AM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Wanlass Park, 320 N Main St.</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn" href="signuppages/5k10k.html">Sign up</a>
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Winterfest Race poster (12 x 18 in).png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="sat">
+              <h3 class="activity-card__title">5K &amp; 10K Race</h3>
+              <a class="activity-card__flyer" href="signuppages/5k10k.html">
+                <img src="flyers/2026/Winterfest Race poster (12 x 18 in).png" loading="lazy" alt="5K and 10K Race flyer">
+              </a>
+              <a class="signup-btn" href="signuppages/5k10k.html">Sign up</a>
             </li>
 
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-snowflake" aria-hidden="true"></i></span>
-                <span class="signup-badge signup-badge--open">Sign up</span>
-              </div>
-              <h3 class="signup-card__title">Suzy Snowflake Pageant</h3>
-              <p class="signup-card__text">A Winterfest pageant for our littlest snowflakes, ages 3&ndash;6.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; 11:00 AM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>111 S Main St. (indoor)</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn" href="signuppages/suzysnowflake.html">Sign up</a>
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Suzy Snowflake Flyer (8.5 x 11 in) (1).png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="sat">
+              <h3 class="activity-card__title">Suzy Snowflake Pageant</h3>
+              <a class="activity-card__flyer" href="signuppages/suzysnowflake.html">
+                <img src="flyers/2026/Suzy Snowflake Flyer (8.5 x 11 in) (1).png" loading="lazy" alt="Suzy Snowflake Pageant flyer">
+              </a>
+              <a class="signup-btn" href="signuppages/suzysnowflake.html">Sign up</a>
             </li>
 
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-bullseye" aria-hidden="true"></i></span>
-                <span class="signup-badge signup-badge--open">Call to enter</span>
-              </div>
-              <h3 class="signup-card__title">Cornhole Tournament</h3>
-              <p class="signup-card__text">Bring your best toss. First place wins $100.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; 11:00 AM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Softball Field, 100 S Main St.</span></li>
-                <li><i class="fas fa-phone" aria-hidden="true"></i><span>Entry: call or text Jamie Haynes, <a href="tel:+14357034783">435-703-4783</a></span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/cornhole.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="sat">
+              <h3 class="activity-card__title">Cornhole Tournament</h3>
+              <a class="activity-card__flyer" href="activitypages/cornhole.html">
+                <img src="flyers/2026/cornhole.png" loading="lazy" alt="Cornhole Tournament flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/cornhole.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-baby" aria-hidden="true"></i></span>
-                <span class="signup-badge signup-badge--open">Sign up</span>
-              </div>
-              <h3 class="signup-card__title">Winter Wee Ones Baby Contest</h3>
-              <p class="signup-card__text">A free cutest baby contest for little ones two and under. Every baby is a winner! Sign up by Nov. 30.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; 2:30 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Softball Field (outside stage)</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn" href="signuppages/weeones.html">Sign up</a>
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/ee Ones! (12 x 18 in).png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="sat">
+              <h3 class="activity-card__title">Winter Wee Ones Baby Contest</h3>
+              <a class="activity-card__flyer" href="signuppages/weeones.html">
+                <img src="flyers/2026/ee Ones! (12 x 18 in).png" loading="lazy" alt="Winter Wee Ones Cutest Baby Contest flyer">
+              </a>
+              <a class="signup-btn" href="signuppages/weeones.html">Sign up</a>
             </li>
 
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></span>
-                <span class="signup-badge signup-badge--open">Sign up</span>
-              </div>
-              <h3 class="signup-card__title">Light Parade</h3>
-              <p class="signup-card__text">Light up a float, vehicle, or walking group and roll down Main Street. Awards will be given!</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; Line up 5:15 PM, starts 6:00 PM</span></li>
-                <li><i class="fas fa-route" aria-hidden="true"></i><span>481 N Main St., south to the end of Main Street</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn" href="signuppages/lightparade.html">Sign up</a>
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Winterfest Light Parade  (8.5 x 11 in) (8 x 10 in).png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="sat">
+              <h3 class="activity-card__title">Light Parade</h3>
+              <a class="activity-card__flyer" href="signuppages/lightparade.html">
+                <img src="flyers/2026/Winterfest Light Parade  (8.5 x 11 in) (8 x 10 in).png" loading="lazy" alt="Light Parade flyer">
+              </a>
+              <a class="signup-btn" href="signuppages/lightparade.html">Sign up</a>
             </li>
 
           </ul>
@@ -247,95 +143,59 @@
           <h2 class="activity-group__title"><i class="fas fa-snowman" aria-hidden="true"></i> Family fun</h2>
           <ul class="signup-grid activity-grid">
 
-            <li class="signup-card" data-days="fri sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-snowman" aria-hidden="true"></i></span>
-                <span class="signup-badge">Free</span>
-              </div>
-              <h3 class="signup-card__title">Winter Carnival</h3>
-              <p class="signup-card__text">Photos with Santa, storytime, a sock skating rink, &ldquo;snow&rdquo; ball fight, wagon and barrel train rides, build a snowman, a snowball pit, and a bounce house and slide.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Fri. from 5:30 PM &middot; Sat. from 11 AM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Behind the white building, 111 S Main St.</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Winter Carnival.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri sat">
+              <h3 class="activity-card__title">Winter Carnival</h3>
+              <a class="activity-card__flyer" href="activitypages/wintercarnival.html">
+                <img src="flyers/2026/Winter Carnival.png" loading="lazy" alt="Winter Carnival flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/wintercarnival.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="fri">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-cookie-bite" aria-hidden="true"></i></span>
-                <span class="signup-badge">Free</span>
-              </div>
-              <h3 class="signup-card__title">Santa&rsquo;s Cookie Workshop</h3>
-              <p class="signup-card__text">Decorate a cookie while supplies last, and get your picture with Santa. Sponsored by Davis Market &amp; La Verkin City.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Fri. Dec. 4 &middot; 5:30&ndash;7:00 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>111 S Main St. (gym/kitchen)</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Santa Cookie Workshop.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri">
+              <h3 class="activity-card__title">Santa&rsquo;s Cookie Workshop</h3>
+              <a class="activity-card__flyer" href="activitypages/santascookies.html">
+                <img src="flyers/2026/Santa Cookie Workshop.png" loading="lazy" alt="Santa's Cookie Workshop flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/santascookies.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="fri sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-fire" aria-hidden="true"></i></span>
-                <span class="signup-badge">Free</span>
-              </div>
-              <h3 class="signup-card__title">S&rsquo;mores Around the Campfire</h3>
-              <p class="signup-card__text">Grab a free s&rsquo;mores kit at the Information Booth while supplies last.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>During Winterfest hours, Dec. 4 &amp; 5</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Kits at the Information Booth</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/s'more kits.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri sat">
+              <h3 class="activity-card__title">S&rsquo;mores Around the Campfire</h3>
+              <a class="activity-card__flyer" href="activitypages/smores.html">
+                <img src="flyers/2026/s'more kits.png" loading="lazy" alt="S'mores Around the Campfire flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/smores.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-shopping-basket" aria-hidden="true"></i></span>
-              </div>
-              <h3 class="signup-card__title">Kids Market</h3>
-              <p class="signup-card__text">Shop the Kids Market at the softball field.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; 11 AM&ndash;2 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Softball Field</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/2026 Market Flyer.jpg" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="sat">
+              <h3 class="activity-card__title">Kids Market</h3>
+              <a class="activity-card__flyer" href="vendors.html#kids-market">
+                <img src="flyers/2026/2026 Market Flyer.jpg" loading="lazy" alt="Kids Market flyer">
+              </a>
+              <a class="signup-btn" href="vendors.html#kids-market">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-th" aria-hidden="true"></i></span>
-                <span class="signup-badge">Free</span>
-              </div>
-              <h3 class="signup-card__title">Blizzard Bingo</h3>
-              <p class="signup-card__text">Play bingo for free and win cash and prizes.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; 2:00 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>111 S Main St. (indoor)</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Bingo.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="sat">
+              <h3 class="activity-card__title">Blizzard Bingo</h3>
+              <a class="activity-card__flyer" href="activitypages/bingo.html">
+                <img src="flyers/2026/Bingo.png" loading="lazy" alt="Blizzard Bingo flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/bingo.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-film" aria-hidden="true"></i></span>
+            <li class="signup-card activity-card" data-days="sat">
+              <h3 class="activity-card__title">Frosty the Snowman Movies</h3>
+              <div class="activity-card__flyer activity-card__flyer--placeholder">
+                <i class="fas fa-snowflake" aria-hidden="true"></i>
+                <span>Flyer coming soon</span>
               </div>
-              <h3 class="signup-card__title">Frosty the Snowman Movies</h3>
-              <p class="signup-card__text">Warm up indoors with a Frosty the Snowman movie night.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; 6:30 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>111 S Main St. (indoor)</span></li>
-              </ul>
+              <span class="signup-btn signup-btn--disabled" aria-disabled="true">Details coming soon</span>
+              <!-- When the flyer is ready, replace the placeholder and button above with:
+              <a class="activity-card__flyer" href="activitypages/frosty.html">
+                <img src="flyers/2026/FROSTY-FLYER.png" loading="lazy" alt="Frosty the Snowman Movies flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/frosty.html">Learn more</a>
+              -->
             </li>
 
           </ul>
@@ -346,66 +206,36 @@
           <h2 class="activity-group__title"><i class="fas fa-star" aria-hidden="true"></i> Holiday traditions</h2>
           <ul class="signup-grid activity-grid">
 
-            <li class="signup-card" data-days="fri">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-tree" aria-hidden="true"></i></span>
-              </div>
-              <h3 class="signup-card__title">&ldquo;L&rdquo; &amp; Tree Lighting Ceremony</h3>
-              <p class="signup-card__text">The grand opening of Winterfest, with an elementary choir performance, the Grand Marshals, and the gingerbread contest winners.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Fri. Dec. 4 &middot; 5:00 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>111 S Main St. (outdoor)</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/treelighting and fun run.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri">
+              <h3 class="activity-card__title">&ldquo;L&rdquo; &amp; Tree Lighting Ceremony</h3>
+              <a class="activity-card__flyer" href="activitypages/treelighting.html">
+                <img src="flyers/2026/treelighting and fun run.png" loading="lazy" alt="Tree Lighting Ceremony flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/treelighting.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="fri sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-gifts" aria-hidden="true"></i></span>
-                <span class="signup-badge">Free</span>
-              </div>
-              <h3 class="signup-card__title">Reason for the Season Displays</h3>
-              <p class="signup-card__text">Come in from the cold to see rooms of holiday displays and get free pictures with Santa.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>During Winterfest hours, Dec. 4 &amp; 5</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>111 S Main St. (southwest glass door)</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Reason for the Season.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri sat">
+              <h3 class="activity-card__title">Reason for the Season Displays</h3>
+              <a class="activity-card__flyer" href="activitypages/reasonforseason.html">
+                <img src="flyers/2026/Reason for the Season.png" loading="lazy" alt="Reason for the Season Displays flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/reasonforseason.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="fri">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-crown" aria-hidden="true"></i></span>
-              </div>
-              <h3 class="signup-card__title">Miss La Verkin Alumni Reunion</h3>
-              <p class="signup-card__text">A reunion for past Miss La Verkin royalty.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Fri. Dec. 4 &middot; 7:30 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>111 S Main St. (indoor)</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Miss Laverkin Alumni Reunion.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri">
+              <h3 class="activity-card__title">Miss La Verkin Alumni Reunion</h3>
+              <a class="activity-card__flyer" href="activitypages/alumnireunion.html">
+                <img src="flyers/2026/Miss Laverkin Alumni Reunion.png" loading="lazy" alt="Miss La Verkin Alumni Reunion flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/alumnireunion.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-star" aria-hidden="true"></i></span>
-              </div>
-              <h3 class="signup-card__title">Live Nativity Program</h3>
-              <p class="signup-card__text">A live nativity production, plus a Nativity Room with hundreds of nativities from around the world.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; 1:30 PM &amp; 4:00 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>111 S Main St. (inside stage)</span></li>
-                <li><i class="fas fa-phone" aria-hidden="true"></i><span>Want to display? Call Maridee Johnson, <a href="tel:+14356692782">435-669-2782</a></span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/live nativity.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="sat">
+              <h3 class="activity-card__title">Live Nativity Program</h3>
+              <a class="activity-card__flyer" href="activitypages/livenativity.html">
+                <img src="flyers/2026/live nativity.png" loading="lazy" alt="Live Nativity Program flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/livenativity.html">Learn more</a>
             </li>
 
           </ul>
@@ -416,62 +246,28 @@
           <h2 class="activity-group__title"><i class="fas fa-music" aria-hidden="true"></i> Music, shopping &amp; more</h2>
           <ul class="signup-grid activity-grid">
 
-            <li class="signup-card" data-days="fri sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-store" aria-hidden="true"></i></span>
-              </div>
-              <h3 class="signup-card__title">Vendors</h3>
-              <p class="signup-card__text">Shop food, crafts, gifts, and holiday treats from local vendors.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Fri. 5:00&ndash;8:30 PM &middot; Sat. from 11 AM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Softball Field</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn" href="vendors.html">Vendor info</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri sat">
+              <h3 class="activity-card__title">Vendors</h3>
+              <a class="activity-card__flyer" href="vendors.html">
+                <img src="flyers/2026/Winterfest Vendor (1).jpg" loading="lazy" alt="Winterfest vendor flyer">
+              </a>
+              <a class="signup-btn" href="vendors.html">Vendor info</a>
             </li>
 
-            <li class="signup-card" data-days="fri sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-info-circle" aria-hidden="true"></i></span>
-              </div>
-              <h3 class="signup-card__title">Information Booth</h3>
-              <p class="signup-card__text">Pick up maps and schedules, ask questions, sign up to volunteer, or donate to Wreaths Across America.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Fri. from 5:30 PM &middot; Sat. from 11 AM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Announcer stand at the ball field</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/information booth.png" target="_blank" rel="noopener">Flyer</a>
-              </div>
+            <li class="signup-card activity-card" data-days="fri sat">
+              <h3 class="activity-card__title">Information Booth</h3>
+              <a class="activity-card__flyer" href="activitypages/infobooth.html">
+                <img src="flyers/2026/information booth.png" loading="lazy" alt="Information Booth flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/infobooth.html">Learn more</a>
             </li>
 
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-guitar" aria-hidden="true"></i></span>
-                <span class="signup-badge">Free</span>
-              </div>
-              <h3 class="signup-card__title">Stout &amp; Howard Family Concert</h3>
-              <p class="signup-card__text">Live music before and after the Light Parade, with fireworks right after the concert.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; 6:30 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Softball Field (outside stage)</span></li>
-              </ul>
-              <div class="activity-actions">
-                <a class="signup-btn signup-btn--ghost" href="flyers/2026/Casey lofthouse (Instagram Post (Square)).png" target="_blank" rel="noopener">Flyer</a>
-              </div>
-            </li>
-
-            <li class="signup-card" data-days="sat">
-              <div class="signup-card__top">
-                <span class="signup-card__icon"><i class="fas fa-magic" aria-hidden="true"></i></span>
-              </div>
-              <h3 class="signup-card__title">Fireworks</h3>
-              <p class="signup-card__text">Winterfest wraps up with fireworks over La Verkin right after the concert.</p>
-              <ul class="activity-meta">
-                <li><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Sat. Dec. 5 &middot; About 7:00 PM</span></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Launched from the La Verkin Overlook</span></li>
-              </ul>
+            <li class="signup-card activity-card" data-days="sat">
+              <h3 class="activity-card__title">Stout &amp; Howard Concert &amp; Fireworks</h3>
+              <a class="activity-card__flyer" href="activitypages/concert.html">
+                <img src="flyers/2026/Casey lofthouse (Instagram Post (Square)).png" loading="lazy" alt="Stout and Howard Family Concert flyer">
+              </a>
+              <a class="signup-btn" href="activitypages/concert.html">Learn more</a>
             </li>
 
           </ul>
